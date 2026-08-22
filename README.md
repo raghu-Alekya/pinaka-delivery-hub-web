@@ -13,7 +13,7 @@ React (Vite) single-page site for Pinaka Delivery Hub: homepage, about, features
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USER>/pinaka-delivery-hub-website.git
+git clone https://github.com/raghu-Alekya/pinaka-delivery-hub-web.git
 cd pinaka-delivery-hub-website
 ```
 
