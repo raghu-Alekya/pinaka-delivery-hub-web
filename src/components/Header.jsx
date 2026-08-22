@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -10,6 +11,7 @@ const navItems = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { isLoggedIn, user, logout } = useAuth();
 
   return (
     <nav className="navbar navbar-expand-lg sticky-top">
@@ -52,16 +54,40 @@ export default function Header() {
           </ul>
 
           <div className="d-flex align-items-center gap-2">
-            <Link className="btn-login" to="/login" onClick={() => setOpen(false)}>
-              Login
-            </Link>
-            <Link
-              className="btn-primary-custom"
-              to="/register"
-              onClick={() => setOpen(false)}
-            >
-              Get Started
-            </Link>
+            {isLoggedIn ? (
+              <>
+                <span className="nav-link" style={{ padding: "27px 0" }}>
+                  {user?.name || user?.email || "Account"}
+                </span>
+                <button
+                  type="button"
+                  className="btn-login"
+                  onClick={() => {
+                    logout();
+                    setOpen(false);
+                  }}
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  className="btn-login"
+                  to="/login"
+                  onClick={() => setOpen(false)}
+                >
+                  Login
+                </Link>
+                <Link
+                  className="btn-primary-custom"
+                  to="/register"
+                  onClick={() => setOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
