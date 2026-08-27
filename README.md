@@ -23,7 +23,27 @@ cd pinaka-delivery-hub-website
 npm install
 ```
 
-### 3. Start the development server
+### 3. Configure environment variables
+
+Copy the example file and edit values:
+
+```bash
+copy .env.example .env
+```
+
+On macOS/Linux: `cp .env.example .env`
+
+| Variable | Purpose |
+| --- | --- |
+| `VITE_API_URL` | Backend API base URL, no trailing slash (example: `http://192.168.1.10:3000/api`) |
+| `VITE_LOGIN_PATH` | Login path appended to the base URL (default `/auth/login`) |
+| `VITE_REGISTER_PATH` | Register path (default `/auth/register`) |
+
+Only variables that start with `VITE_` are available in the React app. Restart `npm run dev` after changing `.env`.
+
+Do **not** put PostgreSQL username, password, or `DATABASE_URL` in this file with a `VITE_` prefix. Those belong on the API server.
+
+### 4. Start the development server
 
 ```bash
 npm run dev
@@ -31,7 +51,7 @@ npm run dev
 
 Open the URL Vite prints (usually `http://localhost:5173`). Edits under `src/` reload automatically.
 
-### 4. Project layout
+### 5. Project layout
 
 | Path | Purpose |
 | --- | --- |
@@ -45,7 +65,7 @@ Open the URL Vite prints (usually `http://localhost:5173`). Edits under `src/` r
 
 Put images in `public/assets/` so they are available as `/assets/filename` in the browser.
 
-### 5. Production build (local check)
+### 6. Production build (local check)
 
 ```bash
 npm run build
@@ -59,6 +79,8 @@ npm run preview
 This app is a **static SPA**. The server only needs to serve files. Do not run `npm run dev` on the server.
 
 ### 1. Build on your local machine
+
+Set `VITE_API_URL` in `.env` to the **live** API URL first. Vite bakes this value into the JS bundle at build time.
 
 ```bash
 npm run build
