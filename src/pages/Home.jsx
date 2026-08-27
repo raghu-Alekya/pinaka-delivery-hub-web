@@ -6,7 +6,9 @@ export default function Home() {
       <section className="hero">
         <div className="container">
           <div className="hero-content">
-            <span className="hero-badge">All Orders. One Hub. More Growth.</span>
+            <span className="hero-badge">
+              All Orders. One Hub. More Growth.
+            </span>
 
             <h1>
               Manage All Your
@@ -18,8 +20,8 @@ export default function Home() {
 
             <p className="hero-description">
               Pinaka Delivery Hub helps you manage orders from all major
-              platforms, streamline operations and grow your restaurant
-              business effortlessly.
+              platforms, streamline operations and grow your restaurant business
+              effortlessly.
             </p>
 
             <div className="hero-features">
@@ -222,8 +224,7 @@ export default function Home() {
               <span className="section-tag">ONE POWERFUL HUB</span>
 
               <h2 className="order-hub-title">
-                All Your Restaurant Orders,{" "}
-                <span>One Powerful Hub</span>
+                All Your Restaurant Orders, <span>One Powerful Hub</span>
               </h2>
 
               <p className="order-hub-description">
@@ -516,8 +517,7 @@ export default function Home() {
             <div className="cta-action">
               <div className="cta-buttons">
                 <Link to="/register" className="btn-cta">
-                  Create Your Account{" "}
-                  <i className="bi bi-arrow-right ms-2"></i>
+                  Create Your Account <i className="bi bi-arrow-right ms-2"></i>
                 </Link>
                 <Link to="/contact" className="btn-cta-outline">
                   Book a Demo <i className="bi bi-calendar ms-2"></i>
@@ -525,7 +525,8 @@ export default function Home() {
               </div>
               <div className="cta-notes">
                 <span>
-                  <i className="bi bi-check-circle-fill"></i> Free to get started
+                  <i className="bi bi-check-circle-fill"></i> Free to get
+                  started
                 </span>
                 <span>
                   <i className="bi bi-check-circle-fill"></i> No credit card

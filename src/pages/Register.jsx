@@ -1,11 +1,34 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { register } from "../api/auth";
+import { useAuth } from "../context/AuthContext";
 
 export default function Register() {
+  const navigate = useNavigate();
+  const { setUser } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
+    setError("");
+    setLoading(true);
+
+    const form = new FormData(event.currentTarget);
+    const name = String(form.get("name") || "").trim();
+    const email = String(form.get("email") || "").trim();
+    const password = String(form.get("password") || "");
+
+    try {
+      const session = await register(name, email, password);
+      setUser(session.user || { name, email });
+      navigate("/");
+    } catch (err) {
+      setError(err.message || "Registration failed.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -39,8 +62,13 @@ export default function Register() {
                 <i className={showPassword ? "bi bi-eye-slash" : "bi bi-eye"} />
               </button>
             </div>
-            <button className="login-continue" type="submit">
-              Continue
+            {error ? (
+              <p className="login-description" style={{ color: "#c0392b" }}>
+                {error}
+              </p>
+            ) : null}
+            <button className="login-continue" type="submit" disabled={loading}>
+              {loading ? "Please wait..." : "Continue"}
             </button>
           </form>
 
