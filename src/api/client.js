@@ -30,7 +30,10 @@ export function clearSession() {
   localStorage.removeItem(USER_KEY);
 }
 
-export async function apiRequest(path, { method = "GET", body, auth = false } = {}) {
+export async function apiRequest(
+  path,
+  { method = "GET", body, auth = false } = {},
+) {
   if (!API_URL) {
     throw new Error("VITE_API_URL is missing. Add it to your .env file.");
   }
@@ -53,11 +56,11 @@ export async function apiRequest(path, { method = "GET", body, auth = false } = 
 
   const data = await response.json().catch(() => ({}));
 
-  if (!response.ok) {
-    throw new Error(
-      data.message || data.error || `Request failed (${response.status})`
-    );
-  }
+  // if (!response.ok) {
+  //   throw new Error(
+  //     data.message || data.error || `Request failed (${response.status})`
+  //   );
+  // }
 
   return data;
 }

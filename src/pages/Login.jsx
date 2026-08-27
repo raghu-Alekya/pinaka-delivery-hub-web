@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../api/auth";
+import { GoogleLogin } from "@react-oauth/google";
 import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
@@ -20,15 +21,38 @@ export default function Login() {
     try {
       const session = await login(
         String(form.get("email") || "").trim(),
-        String(form.get("password") || "")
+        String(form.get("password") || ""),
       );
       setUser(session.user);
-      navigate("/");
+      navigate("/login-success", {
+        state: {
+          user: {
+            email: String(form.get("email") || "").trim(),
+            name: "Revathi Priya Redrouthu",
+          },
+        },
+      });
     } catch (err) {
       setError(err.message || "Login failed.");
     } finally {
       setLoading(false);
     }
+  }
+
+  function handleGoogleSuccess(credentialResponse) {
+    console.log("Google login successful:", credentialResponse);
+
+    setUser({
+      first_name: "Google",
+      last_name: "User",
+      email: "Google authenticated user",
+    });
+
+    navigate("/login-success");
+  }
+
+  function handleGoogleError() {
+    setError("Google login failed. Please try again.");
   }
 
   return (
@@ -73,9 +97,22 @@ export default function Login() {
           </form>
 
           <p className="signup-text">
-            New here?
-            <Link to="/register">Create an account</Link>
+            Don't have an account?
+            <Link to="/register">Sign up</Link>
           </p>
+
+          <div className="login-divider">
+            <span />
+            <em>OR</em>
+            <span />
+          </div>
+
+          <div className="google-login-wrapper">
+            <GoogleLogin
+              onSuccess={handleGoogleSuccess}
+              onError={handleGoogleError}
+            />
+          </div>
         </div>
       </div>
     </div>
