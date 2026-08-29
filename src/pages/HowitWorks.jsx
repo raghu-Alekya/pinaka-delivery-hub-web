@@ -98,40 +98,10 @@ function HowItWorks() {
   return (
     <div className="how-page">
       {/* ================= NAVBAR ================= */}
-      <header className="how-navbar">
-        <div className="how-logo">
-          <div className="how-logo-icon">⚡</div>
-
-          <div>
-            <div className="how-logo-title">PINAKA</div>
-            <div className="how-logo-subtitle">DELIVERY HUB</div>
-          </div>
-        </div>
-
-        <nav className="how-nav-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/features">Features</a>
-          <a href="/integrations">Integrations</a>
-          <a href="/how-it-works" className="active">
-            How It Works
-          </a>
-          <a href="/pricing">Pricing</a>
-          <a href="/contact">Contact</a>
-        </nav>
-
-        <div className="how-nav-actions">
-          <button className="login-btn">Login</button>
-
-          <button className="get-started-btn">Get Started</button>
-        </div>
-      </header>
 
       {/* ================= HERO ================= */}
       <section className="how-hero">
         <div className="how-hero-left">
-          <span className="section-tag">HOW IT WORKS</span>
-
           <h1>
             One Hub.
             <br />
@@ -497,75 +467,6 @@ function HowItWorks() {
           </div>
         </div>
       </section>
-
-      {/* ================= FOOTER ================= */}
-      <footer className="how-footer">
-        <div className="footer-brand">
-          <div className="footer-logo">
-            <div className="footer-logo-icon">⚡</div>
-
-            <div>
-              <strong>PINAKA</strong>
-              <small>DELIVERY HUB</small>
-            </div>
-          </div>
-
-          <p>
-            All orders. One hub. More growth. Pinaka Delivery Hub helps
-            restaurants manage orders, streamline operations and grow their
-            business.
-          </p>
-
-          <div className="social-icons">
-            <span>f</span>
-            <span>◎</span>
-            <span>𝕏</span>
-            <span>▶</span>
-            <span>in</span>
-          </div>
-        </div>
-
-        <div className="footer-column">
-          <h4>Platform</h4>
-
-          <a href="#">For Merchants</a>
-          <a href="/features">Features</a>
-          <a href="/integrations">Integrations</a>
-          <a href="/pricing">Pricing</a>
-          <a href="/how-it-works">How It Works</a>
-        </div>
-
-        <div className="footer-column">
-          <h4>Resources</h4>
-
-          <a href="#">Blog</a>
-          <a href="#">Help Center</a>
-          <a href="#">Guides</a>
-          <a href="#">Success Stories</a>
-          <a href="#">API Documentation</a>
-        </div>
-
-        <div className="footer-column">
-          <h4>Company</h4>
-
-          <a href="/about">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-
-        <div className="footer-column contact">
-          <h4>Contact Us</h4>
-
-          <p>📞 +91 98765 43210</p>
-          <p>✉ info@alekyatechsolutions.com</p>
-          <p>📍 Hyderabad, India</p>
-        </div>
-
-        <div className="footer-bottom">
-          © 2024 Pinaka Delivery Hub. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }

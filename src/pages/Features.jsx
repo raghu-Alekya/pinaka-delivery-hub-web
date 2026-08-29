@@ -271,7 +271,7 @@ function OrdersPreview() {
 
       <div className="order-preview-row">
         <span className="platform-dot zomato-dot">Z</span>
-        <strong>Zomato</strong>
+        <strong> Zomato</strong>
         <span>#1256</span>
         <span>₹620</span>
         <small>2m ago</small>
@@ -581,7 +581,7 @@ export default function Features() {
           <div className="features-section-heading text-center">
             <span>POWERFUL FEATURES</span>
 
-            <h2>All the Tools You Need in One Hub</h2>
+            <h1><b>All the Tools You Need in One Hub</b></h1>
           </div>
 
           <div className="row g-4">
@@ -623,7 +623,7 @@ export default function Features() {
           <div className="connect-heading text-center">
             <span>ALL PLATFORMS. ONE HUB.</span>
 
-            <h2>Connect. Sync. Simplify.</h2>
+            <h1><b>Connect. Sync. Simplify.</b></h1>
 
             <p>
               No more switching between multiple platforms. Manage everything
@@ -672,7 +672,7 @@ export default function Features() {
           <div className="comparison-heading text-center">
             <span>WHY PINAKA?</span>
 
-            <h2>Work Smarter, Not Harder</h2>
+            <h1><b>Work Smarter, Not Harder</b></h1>
           </div>
 
           <div className="comparison-wrapper">
@@ -778,7 +778,7 @@ export default function Features() {
             </div>
 
             <div className="cta-actions">
-              <Link to="/register" className="cta-primary">
+              <Link to="/register" className="cta-primary1">
                 Create Your Account
               </Link>
 
