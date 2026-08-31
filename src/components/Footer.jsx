@@ -48,13 +48,13 @@ export default function Footer() {
                 <Link to="/features">Features</Link>
               </li>
               <li>
-                <Link to="/features">Integrations</Link>
+                <Link to="/integrations">Integrations</Link>
               </li>
               <li>
-                <a href="#pricing">Pricing</a>
+                <Link to="/pricing">Pricing</Link>
               </li>
               <li>
-                <a href="#how-it-works">How It Works</a>
+                <Link to="/how-it-works">How It Works</Link>
               </li>
             </ul>
           </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <a href="#blog">Blog</a>
               </li>
               <li>
-                <Link to="/contact">Help Center</Link>
+                <Link to="/help-center">Help Center</Link>
               </li>
               <li>
                 <a href="#guides">Guides</a>
@@ -90,10 +90,10 @@ export default function Footer() {
                 <a href="#careers">Careers</a>
               </li>
               <li>
-                <a href="#privacy">Privacy Policy</a>
+                <Link to="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <a href="#terms">Terms & Conditions</a>
+                <Link to="/terms">Terms & Conditions</Link>
               </li>
             </ul>
           </div>
@@ -106,11 +106,11 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <i className="bi bi-envelope"></i>
-              <span>support@pinakahub.com</span>
+              <span>info@alekyatechsolutions.com</span>
             </div>
             <div className="contact-item">
               <i className="bi bi-geo-alt"></i>
-              <span>Bangalore, India</span>
+              <span>Hyderabad, India</span>
             </div>
           </div>
         </div>
