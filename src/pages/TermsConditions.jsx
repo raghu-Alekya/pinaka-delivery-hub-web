@@ -11,8 +11,6 @@ export default function TermsConditions() {
       <section className="terms-hero">
         <div className="container">
           <div className="terms-hero-content">
-            <span className="terms-eyebrow">PDH LEGAL</span>
-
             <h1>
               Terms & <span>Conditions</span>
             </h1>
@@ -76,11 +74,7 @@ export default function TermsConditions() {
             ================================================= */}
 
             <article className="terms-article">
-              {/* 01 */}
-
               <section id="introduction">
-                <span className="terms-section-number">01</span>
-
                 <h2>Introduction</h2>
 
                 <p>
@@ -97,8 +91,6 @@ export default function TermsConditions() {
               {/* 02 */}
 
               <section id="eligibility">
-                <span className="terms-section-number">02</span>
-
                 <h2>Eligibility</h2>
 
                 <p>
@@ -116,8 +108,6 @@ export default function TermsConditions() {
               {/* 03 */}
 
               <section id="account">
-                <span className="terms-section-number">03</span>
-
                 <h2>Account Registration</h2>
 
                 <p>
@@ -150,8 +140,6 @@ export default function TermsConditions() {
               {/* 04 */}
 
               <section id="services">
-                <span className="terms-section-number">04</span>
-
                 <h2>Use of Services</h2>
 
                 <p>
@@ -169,8 +157,6 @@ export default function TermsConditions() {
               {/* 05 */}
 
               <section id="integrations">
-                <span className="terms-section-number">05</span>
-
                 <h2>Third-Party Integrations</h2>
 
                 <p>
@@ -192,8 +178,6 @@ export default function TermsConditions() {
               {/* 06 */}
 
               <section id="payments">
-                <span className="terms-section-number">06</span>
-
                 <h2>Payments & Billing</h2>
 
                 <p>
@@ -211,8 +195,6 @@ export default function TermsConditions() {
               {/* 07 */}
 
               <section id="responsibilities">
-                <span className="terms-section-number">07</span>
-
                 <h2>User Responsibilities</h2>
 
                 <p>
@@ -248,8 +230,6 @@ export default function TermsConditions() {
               {/* 08 */}
 
               <section id="intellectual-property">
-                <span className="terms-section-number">08</span>
-
                 <h2>Intellectual Property</h2>
 
                 <p>
@@ -268,8 +248,6 @@ export default function TermsConditions() {
               {/* 09 */}
 
               <section id="availability">
-                <span className="terms-section-number">09</span>
-
                 <h2>Service Availability</h2>
 
                 <p>
@@ -287,8 +265,6 @@ export default function TermsConditions() {
               {/* 10 */}
 
               <section id="termination">
-                <span className="terms-section-number">10</span>
-
                 <h2>Termination</h2>
 
                 <p>
@@ -306,8 +282,6 @@ export default function TermsConditions() {
               {/* 11 */}
 
               <section id="liability">
-                <span className="terms-section-number">11</span>
-
                 <h2>Limitation of Liability</h2>
 
                 <p>
@@ -326,8 +300,6 @@ export default function TermsConditions() {
               {/* 12 */}
 
               <section id="changes">
-                <span className="terms-section-number">12</span>
-
                 <h2>Changes to These Terms</h2>
 
                 <p>

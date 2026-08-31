@@ -71,8 +71,6 @@ export default function PrivacyPolicy() {
               {/* Introduction */}
 
               <section id="introduction">
-                <span className="privacy-section-number">01</span>
-
                 <h2>Introduction</h2>
 
                 <p>
@@ -91,8 +89,6 @@ export default function PrivacyPolicy() {
               {/* Information */}
 
               <section id="information">
-                <span className="privacy-section-number">02</span>
-
                 <h2>Information We Collect</h2>
 
                 <p>
@@ -122,8 +118,6 @@ export default function PrivacyPolicy() {
               {/* Usage */}
 
               <section id="usage">
-                <span className="privacy-section-number">03</span>
-
                 <h2>How We Use Your Information</h2>
 
                 <p>
@@ -153,8 +147,6 @@ export default function PrivacyPolicy() {
               {/* Sharing */}
 
               <section id="sharing">
-                <span className="privacy-section-number">04</span>
-
                 <h2>Information Sharing</h2>
 
                 <p>
@@ -174,8 +166,6 @@ export default function PrivacyPolicy() {
               {/* Security */}
 
               <section id="security">
-                <span className="privacy-section-number">05</span>
-
                 <h2>Data Security</h2>
 
                 <p>
@@ -194,8 +184,6 @@ export default function PrivacyPolicy() {
               {/* Cookies */}
 
               <section id="cookies">
-                <span className="privacy-section-number">06</span>
-
                 <h2>Cookies & Tracking</h2>
 
                 <p>
@@ -214,8 +202,6 @@ export default function PrivacyPolicy() {
               {/* Retention */}
 
               <section id="retention">
-                <span className="privacy-section-number">07</span>
-
                 <h2>Data Retention</h2>
 
                 <p>
@@ -229,8 +215,6 @@ export default function PrivacyPolicy() {
               {/* Rights */}
 
               <section id="rights">
-                <span className="privacy-section-number">08</span>
-
                 <h2>Your Rights</h2>
 
                 <p>
@@ -249,8 +233,6 @@ export default function PrivacyPolicy() {
               {/* Third Party */}
 
               <section id="third-party">
-                <span className="privacy-section-number">09</span>
-
                 <h2>Third-Party Services</h2>
 
                 <p>
@@ -269,8 +251,6 @@ export default function PrivacyPolicy() {
               {/* Changes */}
 
               <section id="changes">
-                <span className="privacy-section-number">10</span>
-
                 <h2>Changes to This Privacy Policy</h2>
 
                 <p>

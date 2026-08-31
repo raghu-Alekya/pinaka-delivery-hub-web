@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import pdhLogo from "../assets/pdh-logo.png";
 
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/features", label: "Features" },
-  { to: "/contact", label: "Contact" },
+  { to: "/pricing", label: "Pricing" },
+  { to: "/contact", label: "Contact us" },
 ];
 
-export default function Header() {
+export default function Header({ hideActions = false }) {
   const [open, setOpen] = useState(false);
   const { isLoggedIn, user, logout } = useAuth();
 
@@ -17,13 +19,7 @@ export default function Header() {
     <nav className="navbar navbar-expand-lg sticky-top">
       <div className="container">
         <Link className="navbar-brand" to="/" onClick={() => setOpen(false)}>
-          <span className="logo-icon">
-            <i className="bi bi-lightning-charge-fill" />
-          </span>
-          <span className="logo-text">
-            <strong>PINAKA</strong>
-            <span>DELIVERY HUB</span>
-          </span>
+          <img src={pdhLogo} alt="Pinaka Delivery Hub" className="pdh-logo" />
         </Link>
 
         <button
@@ -53,42 +49,46 @@ export default function Header() {
             ))}
           </ul>
 
-          <div className="d-flex align-items-center gap-2">
-            {isLoggedIn ? (
-              <>
-                <span className="nav-link" style={{ padding: "27px 0" }}>
-                  {user?.name || user?.email || "Account"}
-                </span>
-                <button
-                  type="button"
-                  className="btn-login"
-                  onClick={() => {
-                    logout();
-                    setOpen(false);
-                  }}
-                >
-                  Logout
-                </button>
-              </>
-            ) : (
-              <>
-                <Link
-                  className="btn-login"
-                  to="/login"
-                  onClick={() => setOpen(false)}
-                >
-                  Login
-                </Link>
-                <Link
-                  className="btn-primary-custom"
-                  to="/register"
-                  onClick={() => setOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </>
-            )}
-          </div>
+          {!hideActions && (
+            <div className="d-flex align-items-center gap-2">
+              {isLoggedIn ? (
+                <>
+                  <span className="nav-link" style={{ padding: "27px 0" }}>
+                    {user?.name || user?.email || "Account"}
+                  </span>
+
+                  <button
+                    type="button"
+                    className="btn-login"
+                    onClick={() => {
+                      logout();
+                      setOpen(false);
+                    }}
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    className="btn-login"
+                    to="/login"
+                    onClick={() => setOpen(false)}
+                  >
+                    Login
+                  </Link>
+
+                  <Link
+                    className="btn-primary-custom"
+                    to="/register"
+                    onClick={() => setOpen(false)}
+                  >
+                    Get Started
+                  </Link>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </nav>

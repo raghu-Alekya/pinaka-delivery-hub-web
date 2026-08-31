@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import pdhLogo from "../assets/pdh-logo.png";
 
 export default function LoginSuccess() {
   const location = useLocation();
@@ -16,16 +17,7 @@ export default function LoginSuccess() {
     <div className="account-details-page">
       {/* Thin Header */}
       <div className="account-details-header">
-        <div className="account-details-logo">
-          <div className="account-logo-icon">
-            <span>⚡</span>
-          </div>
-
-          <div className="account-logo-text">
-            <strong>PINAKA</strong>
-            <span>DELIVERY HUB</span>
-          </div>
-        </div>
+        <img src={pdhLogo} alt="Pinaka Delivery Hub" className="pdh-logo" />
       </div>
 
       {/* Background watermark */}

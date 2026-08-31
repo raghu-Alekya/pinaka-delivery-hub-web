@@ -54,7 +54,7 @@ export default function Footer() {
                 <Link to="/pricing">Pricing</Link>
               </li>
               <li>
-                <Link to="#how-it-works">How It Works</Link>
+                <Link to="/how-it-works">How It Works</Link>
               </li>
             </ul>
           </div>

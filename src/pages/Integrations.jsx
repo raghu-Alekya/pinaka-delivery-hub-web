@@ -159,8 +159,6 @@ export default function Integrations() {
       <section className="integration-list-section" id="integration-list">
         <div className="container">
           <div className="integration-heading">
-            <span>INTEGRATION ECOSYSTEM</span>
-
             <h2>Connect the tools you already use</h2>
 
             <p>
@@ -223,8 +221,6 @@ export default function Integrations() {
       <section className="integration-benefits-section">
         <div className="container">
           <div className="integration-heading">
-            <span>WHY INTEGRATE?</span>
-
             <h2>Keep your operations connected</h2>
           </div>
 
